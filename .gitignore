@@ -1,32 +1,24 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using namespace std;
+void isEven(int num){
+    if (num % 2 == 0) {
+    cout << "Sum is even.\n";
+  } else {
+    cout << "Sum is odd.\n";
+  }
+}
+int main() {
+  int n;
+  cin >> n;
+  int * arr = new int[n];
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
+    sum += arr[i];
+  }
+  isEven(sum);
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+  delete [] arr; 
+  return 0;
+}
